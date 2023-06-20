@@ -30,11 +30,11 @@ export default function Empregos(){
         
         api({
             method: 'get',    
-            url: `services/${tipo}`,                 
+            url: `oportunidades/${tipo}`,                 
         }).then(function(response) {
             setOportunidades(response.data)
         }).catch(function(error) {
-            alert(`Falha no acesso aos cursos! Tente novamente.`);
+            alert(`Falha no acesso aos empregos! Tente novamente.`);
         })
     
     }, []);

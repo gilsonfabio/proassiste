@@ -7,12 +7,9 @@ module.exports = {
         let id = request.params.tipo;
         const oportunidades = await connection('oportunidades')
         .where('optTipo', id)
-        .join('contatos', 'conId', 'solicitacoes.solContato')
-        .join('tipos', 'tipId', 'solicitacoes.solTipo')
-        .orderBy('solAbertura')
-        .select(['solicitacoes.solId', 'solicitacoes.solTitulo', 'solicitacoes.solAbertura', 'solicitacoes.solTipo', 'contatos.conNomCompleto', 'tipos.tipDescricao']);
+        .select('*');
     
-        return response.json(solicitacoes);
+        return response.json(oportunidades);
     }, 
    
     async newOportunidade(request, response) {

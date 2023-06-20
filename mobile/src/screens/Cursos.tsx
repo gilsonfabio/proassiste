@@ -30,7 +30,7 @@ export default function Cursos(){
         
         api({
             method: 'get',    
-            url: `services/${tipo}`,                 
+            url: `oportunidades/${tipo}`,                 
         }).then(function(response) {
             setOportunidades(response.data)
         }).catch(function(error) {

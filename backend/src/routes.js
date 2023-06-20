@@ -68,7 +68,7 @@ routes.post('/signInCon', ContatosController.signIn);
 routes.get('/solContato/:idCon', SolicitacoesController.solContato);
 routes.post('/newSolicitacao', SolicitacoesController.newSolicitacao);
 
-routes.get('/oprtunidades/:tipo', OportunidadesController.oportunidades);
+routes.get('/oportunidades/:tipo', OportunidadesController.oportunidades);
 routes.post('/newOportunidade', OportunidadesController.newOportunidade);
 
 routes.get('/modulos', verifyJWT, ModulosController.index);
